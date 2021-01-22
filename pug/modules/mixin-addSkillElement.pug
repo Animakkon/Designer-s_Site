@@ -1,0 +1,10 @@
+mixin addSkillElement(imgName, imgCaption, skillLevel)
+    - var counter = 0
+    .block_sklls__element
+        img(src="../img/skills/"+imgName alt=imgCaption)
+        caption=imgCaption
+        .block_skills_level
+            while counter < skillLevel
+                img(src="../img/stars/blackStar.png" alt="star "+counter++)
+            while counter < 5
+                img(src="../img/stars/star.png" alt="star "+counter++)
