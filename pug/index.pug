@@ -1,13 +1,71 @@
-- var aList = ["Home", "About me", "Skills", "Portfolio", "Contacts"]
-
 doctype html
 html(lang="en")
-    head
+    head    
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title web developer
     body
-        nav
-            .navigation
-                each item in aList
-                    a.navigation__element(href="")=item
+        .content
+            include modules/nav.pug
+            #Home.block.home
+                .block_home_element.name
+                    h1 Denis Novik
+                .block_home_element.info
+                    p UX | UI designer
+                    p 24 years old, Minsk
+                .block_home_element.language
+                    .group_btn
+                        .btn_ru
+                            p ru
+                        .btn_eng
+                            p eng
+                .block_home_element.myPhoto
+                    img(src="../img/me_bigScreen.png", alt="Denis Novik")
+            #About
+                h2 About me
+                p Hi, I'm Denis – UX/UI designer from Minsk. 
+                p I'm interested in design and everything connected with it.
+                br
+                p I'm studying at courses "Web and mobile design interfaces" in IT-Academy.
+                br
+                p Ready to implement excellent projects with wonderful people.
+            #Skills.block
+                h2 Skills
+                p I work in such programs as
+                .block_skills
+                    include modules/mixin-addSkillElement.pug
+                    +addSkillElement("PS.png", "Adobe Photoshop", 4)
+                    +addSkillElement("AI.png", "Adobe Illustrator", 3)
+                    +addSkillElement("AE.png", "Adobe After Effects", 4)
+                    +addSkillElement("Figma.png", "Figma", 4)
+            #Portfolio.block
+                h2 Portfolio
+                .block_layouts
+                    .block_layouts__element
+                        a(href="http://"): img(src="../img/portfolio/FashionStore.png", alt="Fasion Store")
+                        a(href="http://") Online fasion store - Homepage
+                        
+                         
+                    .block_layouts__element
+                        a(href="http://"): img(src="../img/portfolio/Reebok.png", alt="Reebock Store")
+                        a(href="http://") Reebock Store - Concept
+                    .block_layouts__element
+                        a(href="http://"): img(src="../img/portfolio/BraunLandingPage.png", alt="Braun Shop")
+                        a(href="http://") Braun Landing page - Concept
+            footer 
+                #Contacts
+                    h2 Contacts
+                    .block.message_me
+                        form(action="")
+                            p Want to know more or just chat?
+                            p You are welcome!
+                            input(type="button", value="Send message") 
+                    .block.socianNetworks
+                        a(href="http://"): img(src="../img/links/linkedIn.png", alt="LinkedIn")
+                        a(href="http://"): img(src="../img/links/instagram.png", alt="Instagram")
+                        a(href="http://"): img(src="../img/links/behance.png", alt="Behance")
+                        a(href="http://"): img(src="../img/links/dribble.png", alt="Dribble")
+                    .like_me
+                        p like me on
+                        p LinkedIn, Instagram, Behance, Dibble
+                        
