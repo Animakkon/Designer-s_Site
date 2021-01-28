@@ -1,0 +1,18 @@
+.body{
+    background-color: white;
+}
+
+section:nth-child(odd){
+    background-color: #F6F6F6;
+}
+
+.block{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+img{
+    margin-left: auto;
+    margin-right: auto;
+}
