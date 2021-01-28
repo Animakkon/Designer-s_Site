@@ -2,6 +2,7 @@ mixin addSkillElement(imgName, imgCaption, skillLevel)
     - var counter = 0
     .block_sklls__element
         img(src="../img/skills/"+imgName alt=imgCaption)
+        br
         caption=imgCaption
         .block_skills_level
             while counter < skillLevel

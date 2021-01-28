@@ -1,5 +1,6 @@
 - var linkList = ["Home", "About me", "Skills", "Portfolio", "Contacts"]
 nav
-                .navigation
-                    each item in linkList
-                        a(class="navigation__element "+item href="#"+item)=item
+                .block
+                    .navigation
+                        each item in linkList
+                            a(class="navigation__element "+item href="#"+item)=item
